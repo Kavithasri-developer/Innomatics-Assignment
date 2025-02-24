@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innomatics Style Page</title>
+    <script
+      src="https://kit.fontawesome.com/9b078dca89.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <style>
+      .top-bar {
+        background-color: #d32f2f;
+        color: white;
+        font-size: 15px;
+        padding: 8px 0;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .contact-box {
+        background: black;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid white;
+      }
+      .hero-section {
+        background: url("https://via.placeholder.com/1500x500") no-repeat center
+          center/cover;
+        height: 500px;
+        color: white;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      .enquiry {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 5px;
+        font-weight: 900;
+        margin-left: 80px;
+      }
+      .navbar {
+        font-style: normal;
+        font-weight: 600px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 3px;
+      }
+
+      .navbar-brand img {
+        width: 50px;
+        margin-right: 10px;
+      }
+
+      .subtext {
+        display: block;
+        font-size: 12px;
+        color: red;
+        letter-spacing: 2px;
+      }
+
+      /* Bold and dark font for navbar links */
+      .nav-link {
+        font-weight: bold;
+        font-size: 16px;
+        color: black !important;
+        padding: 10px 15px;
+        transition: 0.3s;
+      }
+
+      /* Hover effect - Red color */
+      .nav-link:hover {
+        color: red !important;
+      }
+
+      /* Active/Clicked effect - Red bottom border */
+      .nav-link.active {
+        border-bottom: 3px solid red;
+      }
+
+      /* Dropdown menu styling */
+      .dropdown-menu {
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Dropdown items styling */
+      .dropdown-item {
+        font-weight: bold;
+        color: black;
+        transition: 0.3s;
+      }
+
+      /* Hover effect on dropdown items */
+      .dropdown-item:hover {
+        background-color: red;
+        color: white;
+      }
+
+      /* Pay Now button */
+      .pay-now {
+        background-color: black;
+        color: white;
+        padding: 8px 16px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .pay-now:hover {
+        background-color: red;
+      }
+      .custom-carousel-img {
+        height: 500px; /* Adjust as needed */
+        object-fit: cover; /* Ensures the image fits well without distortion */
+      }
+
+      /* Layout Container */
+      .containers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Left Content */
+      .left-content {
+        width: 50%;
+      }
+
+      .left-content h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 60px;
+      }
+
+      .left-content p {
+        font-size: 18px;
+        margin-top: 60px;
+        line-height: 1.5;
+      }
+
+      .highlight {
+        color: red;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      /* Right Content (Feature Boxes) */
+      .right-content {
+        width: 45%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .feature-box {
+        background: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-box img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .feature-box p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .but {
+        border: 2px solid red;
+        color: black;
+        background-color: red;
+        border-radius: 5px;
+        height: 50px;
+        width: 150px;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        margin-top: 50px;
+      }
+
+      .heads {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        font-weight: 900;
+        color: white; /* Reduce the margin-bottom to keep the heading closer to the images */
+      }
+
+      .courses {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+        /* background: #000;  Adjust spacing between the heading and cards */
+      }
+
+      .card {
+        background: #000;
+        border: 2px solid white;
+        border-radius: 1px;
+        overflow: hidden;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        position: relative;
+      }
+
+      .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card h3,
+      .card p {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: 1px solid white;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background: white;
+        color: black;
+      }
+
+      .register-btn {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: red;
+        padding: 10px 20px;
+        color: white;
+        writing-mode: vertical-rl;
+        text-decoration: none;
+        border-radius: 5px 0 0 5px;
+      }
+      .con {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 100px;
+      }
+      .advantages {
+        width: 50%;
+        padding-right: 20px;
+      }
+      .advantages h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+      .advantages ul {
+        list-style: none;
+        padding: 0;
+      }
+      .advantages ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+      .advantages ul li::before {
+        content: "•";
+        color: red;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      .video-section {
+        width: 50%;
+        text-align: center;
+      }
+      iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+      }
+      .watch-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: red;
+        border: 2px solid red;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .watch-button:hover {
+        background: red;
+        color: white;
+      }
+      #practice {
+        width: 80%;
+        margin: auto;
+        padding: 100px;
+        background: #fff;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+      .tabs {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin: 20px 0;
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 50px;
+        width: 800px;
+        height: 80px;
+        margin-left: 100px;
+      }
+      .tab {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        /* border: 2px solid black; */
+      }
+      .active {
+        background: red;
+        color: white;
+      }
+      .inactive {
+        background: #000;
+        color: white;
+      }
+      .cot {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgb(217, 211, 211);
+      }
+      .cot img {
+        width: 200px;
+        height: 200px;
+        margin-right: 30px;
+      }
+      .meet {
+        background: #000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .meet h1 {
+        font-size: 40px;
+        color: #fff;
+        padding: 20px 10px;
+        margin-left: 210px;
+      }
+      .no {
+        background: rgb(183, 54, 54);
+        border: 2px solid white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 13%;
+        color: white;
+        font-size: 25px;
+        margin-right: 100px;
+      }
+      .review {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0px 4px 10px black;
+        margin-top: 100px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .slider {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+      }
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 20px;
+      }
+      .slide {
+        min-width: 25%; /* Each slide now takes 25% to show 4 images per slide */
+        box-sizing: border-box;
+        padding: 15px; /* Increased padding for better gap */
+      }
+      .slide img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+      }
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+
+      h2 {
+        margin: 20px 0;
+      }
+
+      .blog-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+
+      .blog-card {
+        width: 300px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: 0.3s;
+        border: 3px dotted black;
+      }
+
+      .blog-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .blog-content {
+        padding: 15px;
+        text-align: left;
+      }
+
+      .blog-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .blog-content p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .register-btn {
+        position: fixed;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .older-entries {
+        display: block;
+        margin: 20px;
+        color: blue;
+        text-decoration: none;
+      }
+
+      .older-entries:hover {
+        text-decoration: underline;
+      }
+
+      .contar {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        background: #000;
+        color: white;
+      }
+      .left,
+      .middle,
+      .right {
+        width: 30%;
+        color: white;
+      }
+      .left img {
+        width: 90px;
+      }
+      .icons i {
+        width: 20px;
+        margin: 5px;
+        height: 100px;
+      }
+      .register {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        background: red;
+        color: white;
+        padding: 10px;
+        writing-mode: vertical-lr;
+        cursor: pointer;
+      }
+      #cou {
+        color: red;
+      }
+      #co {
+        color: red;
+      }
+      #head {
+        font-size: 30px;
+        margin-left: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar text-center">
+      <div class="contact-info">
+        <span class="enquiry">Enquire Now:</span>
+        <span class="contact-box">Hyd: 📞 9951666670</span>
+        <span class="contact-box">Pune: 📞 9951666671</span>
+        <span class="contact-box">Bengaluru: 📞 9951666672</span>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+      <div class="container-fluid">
+        <!-- Logo and Company Name -->
+        <a class="navbar-brand" href="#">
+          <img src="logoof inno.jpg" alt="Innomatics Logo" />
+          INNOMATICS <span class="subtext">RESEARCH LABS</span>
+        </a>
+
+        <!-- Toggle Button for Mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+
+            <!-- Dropdown for Courses -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="coursesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Courses
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Data Science</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Full stack development</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Amazon Web Services(AWS)</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">IT Scholars Program</a>
+            </li>
+
+            <!-- Dropdown for Internship -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="internshipDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Internship
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free fullstack Internship</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Generative AI Intership</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Data Science Internship</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Data Science Summer Intership</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Dropdown for About Us -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Placements</a></li>
+                <li><a class="dropdown-item" href="#">Partner with us</a></li>
+                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">Reviews</a></li>
+                <li><a class="dropdown-item" href="#">Gallery</a></li>
+              </ul>
+            </li>
+
+            <!-- Dropdown for Events -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >5 Days AIGenertiveBootcamp</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Free Online Data Science Webinar</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Campus Ambassador</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Pay Now Button -->
+          <button class="pay-now ms-3">₹ Pay Now</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="banner_mobile-06.jpg"
+            class="d-block w-100"
+            alt="First Slide"
+            height="479px"
+            width="40px"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="awards-2.jpg" class="d-block w-100" alt="Second Slide" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="banner_new-03-scaled.jpg"
+            class="d-block w-100"
+            alt="Third Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="AWARD-PAGE-1024x1024-1.jpg"
+            class="d-block w-100"
+            alt="Third Slide"
+            height="500px"
+          />
+        </div>
+      </div>
+
+      <!-- Previous Button -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- Next Button -->
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="containers">
+      <!-- Left Section: Text Content -->
+      <div class="left-content">
+        <h1>We just don’t train,<br />We transform the careers</h1>
+        <p>
+          <strong>Innomatics Research Labs</strong> is a pioneer in
+          <strong>"Transforming Careers and Lives"</strong> of individuals in
+          the Digital Space by catering advanced training on
+          <span class="highlight"
+            >NASSCOM Future skills prime Certified Data Science, Python,
+            Predictive Analytics Modeler, Machine Learning, Artificial
+            Intelligence (AI), Generative AI, Full-stack web development, and
+            Career Launching program</span
+          >
+          for students who are willing to showcase their skills in the
+          competitive job market with valuable credentials.
+        </p>
+        <h2 class="highlight">
+          NASSCOM Futureskills Prime Registered Business Partner
+        </h2>
+        <p>
+          As an authorized
+          <strong>NASSCOM FutureSkills Prime Training Partner</strong>, we
+          provide practical and real-world learning experiences including case
+          studies, business challenges, hackathons, workshops, and meetups. We
+          partner with <strong>over 100 companies</strong> for placement
+          assistance.
+        </p>
+        <button class="but">View more</button>
+      </div>
+
+      <!-- Right Section: Feature Boxes -->
+
+      <!-- Right Section: Feature Boxes -->
+
+      <div class="right-content">
+        <div class="feature-box">
+          <img src="leaders.png" alt="Global Leaders" />
+          <p>Global Leaders in Training</p>
+        </div>
+        <div class="feature-box">
+          <img src="educatiom.png" alt="Practical Approach" />
+          <p>Practical Oriented Approach</p>
+        </div>
+        <div class="feature-box">
+          <img src="intern.png" alt="Hands-on Projects" />
+          <p>Hands-on Projects & Internship</p>
+        </div>
+        <div class="feature-box">
+          <img src="job.jpg" alt="Placement Assistance" />
+          <p>100% Placement Assistance</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="heads">Trending Courses of 2025</h1>
+      <div class="courses">
+        <div class="card">
+          <img src="prime.webp" alt="Data Science" />
+          <div class="card-content">
+            <h3>NASSCOM Futureskills Prime Certified Data Science</h3>
+            <p>
+              This is a great choice for tech geeks, students, and professionals
+              who want to upskill in Data Science.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="FULL-STACK-WEB.webp" alt="Full Stack Development" />
+          <div class="card-content">
+            <h3>Full Stack Development</h3>
+            <p>
+              Learn Frontend, Backend, databases, debugging, and testing to
+              advance as a Full Stack Developer.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="eye.webp" alt="Generative AI" />
+          <div class="card-content">
+            <h3>Generative AI</h3>
+            <p>
+              Perfect for students and professionals wanting to learn the latest
+              AI tools and skills.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="register-btn">Register Now</a>
+
+    <div class="con">
+      <!-- Left Side: Advantages -->
+      <div class="advantages">
+        <h2>Advantages of training at Innomatics</h2>
+        <ul>
+          <li>Flexible Online Live and Classroom Training</li>
+          <li>100% Internship guarantee program</li>
+          <li>Dedicated Placement vertical</li>
+          <li>Mastery level certifications that are globally accepted</li>
+          <li>Backup Classes & Lifetime LMS access</li>
+          <li>Completely Practical Oriented Approach</li>
+          <li>Hands-on training on the capstone projects</li>
+          <li>Bi-weekly connects from industry experts</li>
+          <li>Domain Teach back and Reverse Presentations</li>
+          <li>Free Technical Support & Individual Career Counselling</li>
+          <li>Expert mentoring Weekly Tests & Assignments</li>
+          <li>Mock-up Exams, and Interviews</li>
+          <li>Meet-ups, Workshops, Hackathons & Conferences</li>
+          <li>Exclusive programs for Non-IT professionals</li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Video -->
+      <div class="video-section">
+        <h2>Let’s Watch a Video Bite From Our Institute</h2>
+        <iframe
+          src="https://www.youtube.com/embed/OKUFrW40xyI?si=xjHpi3g-uMbKH1DY"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <br />
+        <a href="#" class="watch-button">Watch More Videos</a>
+      </div>
+    </div>
+
+    <div id="practice">
+      <h2>Why People Choose Our Training</h2>
+      <div class="tabs">
+        <button class="tab active">EXPERT TRAINERS</button>
+        <button class="tab inactive">CAPSTONE PROJECTS</button>
+        <button class="tab inactive">INHOUSE INTERNSHIP</button>
+        <button class="tab inactive">PLACEMENTS</button>
+      </div>
+      <div class="cot">
+        <img src="WEB-IMAGE-1.webp" alt="" />
+        <p>
+          Innomatics explored all over India to get the best trainers and
+          succeeded with it. We have a pool of trainers working with highly
+          qualified business partners and fortune companies to provide advanced
+          and comprehensive training. <br /><br />
+          They curate the course content with an eye on the industry needs and
+          standards to make students skillful and champions in solving the
+          complex challenges of the industry.
+        </p>
+      </div>
+    </div>
+
+    <div class="meet">
+      <h1>Meet Our Experts</h1>
+      <button class="no">
+        <i class="fas fa-phone-alt"> 9951666670</i>
+      </button>
+    </div>
+
+    <div class="review">
+      <h2>Here Are Some Of Our Success Stories</h2>
+      <div class="slider">
+        <!-- <button class="prev" onclick="moveSlide(-1)">&#10094;</button> -->
+        <div class="slides">
+          <div class="slide">
+            <img src="Aaesha_Azeemuddin-400x516.webp" alt="Success Story 1" />
+          </div>
+          <div class="slide">
+            <img src="Alladi_Ranjith-400x516.webp" alt="Success Story 2" />
+          </div>
+          <div class="slide">
+            <img src="Cherukupalli_Indhu-400x516.webp" alt="Success Story 3" />
+          </div>
+          <div class="slide">
+            <img
+              src="G._Venkata_Mareswararao-400x516.webp"
+              alt="Success Story 4"
+            />
+          </div>
+        </div>
+        <!-- <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+      </div>
+    </div>
+
+    <h2>Read Latest Business News & Blog updates</h2>
+
+    <div class="blog-container">
+      <div class="blog-card">
+        <img src="python.webp" alt="OOPS Concepts in Python" />
+        <div class="blog-content">
+          <h3>OOPS Concepts in Python: Part 1</h3>
+          <p>Class, Objects, Constructor, Methods in Python...</p>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img
+          src="data science.webp"
+          alt="Real-world Applications of Data Science"
+        />
+        <div class="blog-content">
+          <h3>
+            Real-world Applications of Data Science in Today's Fast-paced
+            Environment
+          </h3>
+          <p>Data science is a field that has emerged as an...</p>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="web-site-blog.webp" alt="Join Innomatics" />
+        <div class="blog-content">
+          <h3>Why should you join Innomatics?</h3>
+          <p>At Innomatics we believe in looking at the...</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="older-entries">« Older Entries</a>
+
+    <div class="register-btn">Register Now</div>
+
+    <div class="contar">
+      <div class="left">
+        <img src="logoof inno.jpg" alt="Innomatics Research Labs" />
+        <h1 id="head">innomatics_Reasearch_Labs</h1>
+        <p>
+          A leading training institute,
+          <strong>Innomatics Research Labs</strong> offers courses in areas...
+        </p>
+        <div class="icons">
+          <i class="fa-brands fa-linkedin" style="color: #216ae8"></i>
+          <i class="fa-brands fa-square-facebook" style="color: #2053ac"></i>
+          <i class="fa-brands fa-instagram" style="color: #ca1631"></i>
+          <i class="fa-sharp fa-solid fa-x" style="color: #dbdbdc"></i>
+          <i class="fa-brands fa-youtube" style="color: #df0c21"></i>
+        </div>
+      </div>
+      <div class="middle">
+        <h2 id="cou">Courses</h2>
+        <ul>
+          <li>Data Science</li>
+          <li>Online Data Science</li>
+          <li>Advanced Generative AI</li>
+          <li>Full Stack Web Developer</li>
+          <li>Digital Marketing</li>
+          <li>Placements</li>
+        </ul>
+      </div>
+      <div class="right">
+        <h2 id="co">Contact Us:</h2>
+        <p>
+          <strong>Kukatpally — Hyderabad</strong><br />#205, 2nd Floor, Fortune
+          Signature...
+        </p>
+        <p><strong>Pune</strong><br />2nd Floor, Sai Sayaji Apartment...</p>
+        <p>
+          <strong>Bengaluru</strong><br />NO.576/B, 3rd FLOOR, Swetha Arcade...
+        </p>
+        <p><strong>Phone/Whatsapp:</strong><br />+91-9951666670</p>
+        <p><strong>Email Us:</strong><br />admissions@innomatics.in</p>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/9b078dca89.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
